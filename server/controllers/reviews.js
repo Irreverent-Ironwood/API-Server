@@ -10,6 +10,18 @@ const getReviews = (req, res) => {
   })
 }
 
+const getMetaReviews = (req, res) => {
+  axios.get('/reviews/meta')
+  .then((res) => {
+    res.send(res.data);
+  })
+  .catch((err) => {
+    console.log('error getting meta reviews');
+  })
+}
+
+
+module.exports = { getReviews, getMetaReviews };
 
 
 
