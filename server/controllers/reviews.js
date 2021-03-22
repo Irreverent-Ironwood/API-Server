@@ -20,8 +20,20 @@ const getMetaReviews = (req, res) => {
   })
 }
 
+const postReview = (req, res) => {
+  
+};
 
-module.exports = { getReviews, getMetaReviews };
+const updateHelpfulness = (req, res) => {
+
+};
+
+const reportReviews = (req, res) => {
+
+}
+
+
+module.exports = { getReviews, getMetaReviews, postReview, updateHelpfulness, reportReviews };
 
 
 
