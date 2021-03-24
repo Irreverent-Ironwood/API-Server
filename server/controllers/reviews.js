@@ -5,7 +5,7 @@ const axios = require('axios');
 
 const getReviews = (req, res) => {
 
-  axios.get('http://localhost:3000/reviews')
+  axios.get('http://localhost:5000/reviews')
   .then((response) => {
     res.send(response.data);
   })
