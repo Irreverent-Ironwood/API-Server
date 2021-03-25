@@ -1,43 +1,18 @@
 const axios = require('axios');
 
-// const path = "http://localhost:3001"
-// const url = path + req.originalUrl
-
 const getReviews = (req, res) => {
 
-  axios.get('http://localhost:5000/reviews')
+  axios.get(`http://ec2-3-92-221-72.compute-1.amazonaws.com:5000${req.url}`)
   .then((response) => {
-    res.send(response.data);
+    res.send(response.data)
   })
   .catch((err) => {
-    console.log('error getting reviews');
+    res.status(404);
   })
 }
 
-const getMetaReviews = (req, res) => {
-  axios.get('/reviews/meta')
-  .then((res) => {
-    res.send(res.data);
-  })
-  .catch((err) => {
-    console.log('error getting meta reviews');
-  })
-}
+module.exports = { getReviews };
 
-const postReview = (req, res) => {
-  console.log(req.body);
-};
-
-const updateHelpfulness = (req, res) => {
-
-};
-
-const reportReviews = (req, res) => {
-
-}
-
-
-module.exports = { getReviews, getMetaReviews, postReview, updateHelpfulness, reportReviews };
 
 
 

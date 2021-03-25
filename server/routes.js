@@ -3,11 +3,8 @@ const controllers = require('./controllers');
 const router = express.Router();
 
 // router.get('/products/*', controllers.qa);
-router.get('/reviews', controllers.reviews.getReviews);
-router.get('/reviews/meta', controllers.reviews.getMetaReviews);
-router.post('/reviews', controllers.reviews.postReview);
-router.put('/reviews/:review_id/helpful', controllers.reviews.updateHelpfulness);
-router.put('/reviews/:review_id/report', controllers.reviews.reportReviews);
+router.get('/reviews/*', controllers.reviews.getReviews)
+
 
 
 module.exports = router;
